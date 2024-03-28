@@ -8,7 +8,7 @@ This repository is divided into three parts, each aimed at challenging you in di
 
 ### 0. Guided Tutorial
 - **Objective**: Replicate the "Holy Grail" layout.
-- **Instructions**: Follow the guided steps to create the Holy Grail layout multiple times. This exercise is designed to help you get comfortable with CSS Grid and Flexbox.
+- **Instructions**: Follow the guided steps to create the Holy Grail layout multiple times. This exercise is designed to help you get comfortable with CSS Grid.
 - **Path**: `0-guided/`
 
 ### 1. Challenge
