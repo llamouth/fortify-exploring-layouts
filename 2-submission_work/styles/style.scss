@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Epilogue";
+}
+
+body {
+    margin: 0;
+    padding: 5px;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    background: #FAFAFA;
+}
+
+.container {
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 15fr;
+    grid-template-areas: 
+    "nav"
+    "main";
+    height: 100vh;
+}
+
+.navbar {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+
+    &__left {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-left: 30px;
+        width: 300px;
+
+        h2 {
+            margin-right: 40px;
+            font-size: 40px;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__features, &__company, &__careers, &__about, &__register, &__login{
+        width: 100px;
+        color: #808080;
+
+        &:hover {
+            color: #000;
+            cursor: pointer;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__careers{
+        margin-left: 20px;
+    }
+
+    &__features {
+        cursor: pointer;
+        position: relative;
+    }
+
+    &__register {
+        padding: 10px 15px;
+        width: 120px;
+        background: none;
+        border: 2px solid rgb(153, 153, 153);
+        border-radius: 10px;
+        font-weight: 700;
+
+        &:hover {
+            background: none;
+            color: #000;
+            border: 2px solid black;
+        }
+    }
+
+    &__login {
+        position: relative;
+        top: 11px;
+    }
+
+    &__company {
+        margin-left: 13px;
+        cursor: pointer;
+        position: relative;
+    }
+   
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "left right";
+
+    .aside-left {
+        grid-area: left;
+        display: grid;
+        grid-template-rows: 2fr 2fr 1fr;
+        grid-template-areas: 
+        "left-header"
+        "left-info"
+        "left-footer";
+
+        &__header {
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            grid-area: left-header;
+            font-size: 80px;
+            font-weight: bold;
+        }
+
+        &__info {
+            grid-area: left-info;
+
+            p {
+                position: relative;
+                left: -10px;
+                font-size: 20px;
+                color: #6E6E6E;
+                padding: 40px 100px;
+                line-height: 30px;
+            }
+
+            button {
+                padding: 15px;
+                background: #000;
+                color: #fff;
+                border: 0;
+                border-radius: 10px;
+                margin-left: 90px;
+                font-weight: 800;
+                width: 130px;
+
+                &:hover {
+                    background: none;
+                    color: #000;
+                    border: 2px solid black;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &__footer {
+            grid-area: left-footer;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+        }
+
+        svg {
+            margin: 20px;
+        }
+    }
+
+    .aside-right {
+        grid-area: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 500px;
+        }
+    }
+}
+
+
+.features-popup {
+    background: #fff;
+    list-style-type: none;
+    line-height: 35px;
+    width: 120px;
+    border: none;
+    position: absolute;
+    padding: 15px 25px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+    right: 18px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #808080;
+    gap: 20px;
+    
+    span {
+        margin-left: 10px;
+    }
+
+    li {
+        color: #6E6E6E;
+
+        &:hover{
+            color: #000;
+        }
+    }
+}
+
+.company-popup {
+    background: #fff;
+    list-style-type: none;
+    line-height: 35px;
+    width: 80px;
+    border: none;
+    position: absolute;
+    padding: 15px 25px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #808080;
+    gap: 20px;
+
+    li {
+        color: #6E6E6E;
+
+        &:hover{
+            color: #000;
+        }
+    }
+}
+
+
+.hidden{
+    display: none;
+}
+
+
